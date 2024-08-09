@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>午餐抽籤</title>
     <style>
-        /*設定全局字體、使用Flexbox居中佈局，背景顏色為淡灰色，確保內容在垂直和水平方向上居中顯示*/
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -14,7 +13,7 @@
             height: 100vh;
             background-color: #f0f0f0;
         }
-        /*將主要內容包裝在一個白色的盒子內，並設置了圓角和陰影，增加視覺層次感*/
+	    
         .container {
             text-align: center;
             background-color: white;
@@ -22,7 +21,7 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-         /*設定按鈕樣式，包括內邊距、字體大小、邊框、邊角、背景顏色和文字顏色。cursor: pointer;設置鼠標懸停時的指針形狀*/
+	    
         button {
             padding: 10px 20px;
             font-size: 16px;
@@ -32,11 +31,11 @@
             background-color: #007BFF;
             color: white;
         }
-        /*定義按鈕懸停時的背景色變化，增加交互性*/
+       
         button:hover {
             background-color: #0056b3;
         }
-        /*設定結果顯示區域的上邊距和字體大小，確保結果文本易於閱讀*/
+        
         .result {
             margin-top: 20px;
             font-size: 20px;
@@ -48,9 +47,7 @@
     <div class="container">
         <h1>午餐抽籤</h1>
         <button onclick="draw()">抽獎!</button>
-        <!-- 點擊時調用draw()函數 -->
         <div class="result" id="result"></div>
-        <!-- 顯示抽籤結果的區域，通過ID進行標識，方便JavaScript操作 -->
     </div>
 
     <script>
@@ -58,15 +55,15 @@
             const options = [
                 "麥當勞",
                 "大慶麵店",
-				"八方雲集",
+		"八方雲集",
                 "阿蓮米粉",
                 "燒臘便當店",
                 "牛肉麵",
-				"找一家沒吃過的!",
-				"一品香",
-				"丸龜",
+		"找一家沒吃過的!",
+		"一品香",
+		"丸龜",
             ];
-            /* 生成一個介於0和options.length - 1之間的隨機整數,作為數組的索引*/
+        
             const randomIndex = Math.floor(Math.random() * options.length);
             const result = options[randomIndex];
             document.getElementById('result').innerText = "恭喜！您抽中了: " + result;
